@@ -17,20 +17,6 @@ const robotoSerif = Roboto_Serif({
   display: "swap",
 });
 
-export default function RootLayout({ children }) {
-  return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <body className={`${poppins.variable} ${robotoSerif.variable}`}>
-          <ThemeProvider>{children}</ThemeProvider>
-          {/* <Analytics />
-        <SpeedInsights /> */}
-        </body>
-      </html>
-    </ViewTransitions>
-  );
-}
-
 export const metadata = {
   // metadataBase: new URL("https://swaybae.net"),
   title: "Sway Bae Official",
@@ -90,3 +76,17 @@ export const viewport = {
     { media: "(prefers-color-scheme: dark)", color: "#121313" },
   ],
 };
+
+export default function RootLayout({ children }) {
+  return (
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${poppins.variable} ${robotoSerif.variable}`}>
+          <ThemeProvider>{children}</ThemeProvider>
+          {/* <Analytics />
+        <SpeedInsights /> */}
+        </body>
+      </html>
+    </ViewTransitions>
+  );
+}

@@ -69,6 +69,19 @@ const config = {
         xs: "480px",
         "3xl": "1740px",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(8px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animations: { fadeIn: "fadeIn 0.3s ease-in-out forwards" },
     },
   },
   plugins: [tailwindcssAnimate, typography],
