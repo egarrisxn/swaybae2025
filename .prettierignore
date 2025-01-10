@@ -1,0 +1,12 @@
+pnpm-lock.yaml
+node_modules
+out
+build
+coverage
+dist
+public
+.next
+.git
+.vercel
+*.lock
+*.log
