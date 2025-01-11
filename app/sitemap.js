@@ -1,4 +1,4 @@
-import sitemapData from "../lib/sanity/sitemap";
+import { sitemapData } from "@/lib/sanity/sitemap";
 
 export default async function sitemap() {
   const { posts, tags } = await sitemapData();
@@ -57,12 +57,12 @@ export default async function sitemap() {
   ];
 
   const postRoutes = posts.map((post) => ({
-    url: `${baseUrl}/blog/post/${post.slug}`,
+    url: `${baseUrl}/blog/post/${post.postSlug}`,
     lastModified: post._updatedAt,
   }));
 
   const tagRoutes = tags.map((tag) => ({
-    url: `${baseUrl}/blog/tag/${tag.slug}`,
+    url: `${baseUrl}/blog/tag/${tag.tagSlug}`,
     lastModified: tag._updatedAt,
   }));
 

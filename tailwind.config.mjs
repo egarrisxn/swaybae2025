@@ -81,7 +81,7 @@ const config = {
           },
         },
       },
-      animations: { fadeIn: "fadeIn 0.3s ease-in-out forwards" },
+      animation: { fadeIn: "fadeIn 0.3s ease-in-out forwards" },
     },
   },
   plugins: [tailwindcssAnimate, typography],

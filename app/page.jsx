@@ -1,11 +1,11 @@
-import Image from "next/image";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
     <div className="grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto]">
-      <section></section>
-      <section></section>
-      <section></section>
+      <header>xxx</header>
+      <main>xxx</main>
+      <Footer hasScroll={true} />
     </div>
   );
 }

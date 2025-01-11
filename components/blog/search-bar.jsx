@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useDebouncedCallback } from "use-debounce";
-import { SEARCH_QUERY } from "@/lib/sanity/queries";
+import { searchQuery } from "@/lib/sanity/queries";
 import { client } from "@/lib/sanity/client";
 import { SearchIcon } from "@/components/icons/search-icon";
 
@@ -29,7 +29,7 @@ export default function SearchBar({ placeholder }) {
     if (term) {
       try {
         console.log("Search term:", term);
-        const response = await client.fetch(SEARCH_QUERY, { term });
+        const response = await client.fetch(searchQuery, { term });
         setSearchResults(response);
         console.log("Search results:", response);
       } catch (error) {

@@ -26,7 +26,7 @@ const buttonVariants = cva(
       size: {
         default: "h-9 px-4 py-2",
         link: "max-w-xs",
-        icon: "p-2",
+        icon: "p-1.5 md:p-2",
         stubby: "px-6 py-3",
         thick:
           "h-12 px-4 py-2 w-full max-w-[275px] sm:max-w-[300px] md:max-w-[250px] lg:max-w-[275px] xl:max-w-[325px]",

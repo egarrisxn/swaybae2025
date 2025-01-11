@@ -7,6 +7,7 @@ dist
 public
 .next
 .git
+.github
 .vercel
 *.lock
 *.log

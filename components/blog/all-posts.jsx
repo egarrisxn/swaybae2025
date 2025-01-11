@@ -39,15 +39,18 @@ export default function AllPosts({ posts }) {
             Recent
           </h2>
           <section className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {posts.slice(0, loadMore).map((post, index) => (
-              <div
-                key={post._id}
-                className={`animate-fadeIn translate-y-2 opacity-0 transition-opacity duration-300 ease-in-out`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <PostCard post={post} noTagColor={true} />
-              </div>
-            ))}
+            {posts
+              .filter((post) => !post.featured)
+              .slice(0, loadMore)
+              .map((post, index) => (
+                <div
+                  key={post._id}
+                  className={`translate-y-2 animate-fadeIn opacity-0 transition-opacity duration-300 ease-in-out`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <PostCard post={post} noTagColor={true} />
+                </div>
+              ))}
           </section>
           <div className="mt-16 flex justify-center p-4">
             {posts.length > loadMore ? (
