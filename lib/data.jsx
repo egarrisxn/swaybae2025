@@ -1,3 +1,13 @@
+import {
+  CalendarIcon,
+  HandshakeIcon,
+  ImagesIcon,
+  HomeIcon,
+  MailIcon,
+  PenLineIcon,
+  ShoppingCartIcon,
+  UserIcon,
+} from "lucide-react";
 import { TwitchIcon } from "@/components/icons/twitch-icon";
 import { YoutubeIcon } from "@/components/icons/youtube-icon";
 import { TiktokIcon } from "@/components/icons/tiktok-icon";
@@ -7,8 +17,26 @@ import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { DiscordIcon } from "@/components/icons/discord-icon";
 import { SpotifyIcon } from "@/components/icons/spotify-icon";
 
-//! NAVIGATION LINKS
-export const navLinks = [
+//! NAVBAR DATA
+export const navData = {
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/about", icon: UserIcon, label: "About" },
+    { href: "/blog", icon: PenLineIcon, label: "Blog" },
+    { href: "/calendar", icon: CalendarIcon, label: "Calendar" },
+    { href: "/community", icon: HandshakeIcon, label: "Community" },
+    { href: "/contact", icon: MailIcon, label: "Contact" },
+    { href: "/media", icon: ImagesIcon, label: "Media Kit" },
+    {
+      href: "https://shop.swaybae.net/",
+      icon: ShoppingCartIcon,
+      label: "Store",
+    },
+  ],
+};
+
+//! ALL NAVIGATION LINKS
+export const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
@@ -18,10 +46,119 @@ export const navLinks = [
   { href: "/faq", label: "FAQs" },
   { href: "/media", label: "Media Kit" },
   { href: "/privacy", label: "Privacy Policy" },
-  { href: "/setup", label: "Setup" },
-  { href: "/social", label: "Social" },
   { href: "https://shop.swaybae.net/", label: "Store", external: true },
+  { href: "/subathon", label: "Subathon" },
   { href: "/terms", label: "Terms Of Service" },
+];
+
+//! SOCIAL ICONS
+export const socialIcons = {
+  twitch: (props) => <TwitchIcon {...props} />,
+  youtube: (props) => <YoutubeIcon {...props} />,
+  tiktok: (props) => <TiktokIcon {...props} />,
+  twitter: (props) => <TwitterIcon {...props} />,
+  bluesky: (props) => <BlueskyIcon {...props} />,
+  instagram: (props) => <InstagramIcon {...props} />,
+  discord: (props) => <DiscordIcon {...props} />,
+  spotify: (props) => <SpotifyIcon {...props} />,
+};
+
+//! SOCIAL DATA
+export const socialData = {
+  social: {
+    Twitch: {
+      name: "Twitch",
+      url: "https://www.twitch.tv/sway_bae",
+      icon: socialIcons.twitch,
+    },
+    YouTube: {
+      name: "YouTube",
+      url: "https://youtube.com/channel/UCbpQhE5NYQ05pSp_DJJQxCA",
+      icon: socialIcons.youtube,
+    },
+    TikTok: {
+      name: "TikTok",
+      url: "https://tiktok.com/@sway_baetv",
+      icon: socialIcons.tiktok,
+    },
+    Twitter: {
+      name: "Twitter",
+      url: "https://twitter.com/sway_baetv",
+      icon: socialIcons.twitter,
+    },
+    Bluesky: {
+      name: "Bluesky",
+      url: "https://swaybae.bsky.social",
+      icon: socialIcons.bluesky,
+    },
+    Instagram: {
+      name: "Instagram",
+      url: "https://instagram.com/sway_baetv",
+      icon: socialIcons.instagram,
+    },
+    Discord: {
+      name: "Discord",
+      url: "https://discord.com/invite/K73uN9k",
+      icon: socialIcons.discord,
+    },
+    Spotify: {
+      name: "Spotify",
+      url: "https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq",
+      icon: socialIcons.spotify,
+    },
+  },
+};
+
+//! SOCIAL CARDS
+export const socialCards = [
+  {
+    title: "Twitch",
+    subtitle: "@sway_bae",
+    href: "https://www.twitch.tv/sway_bae",
+    Icon: TwitchIcon,
+  },
+  {
+    title: "YouTube",
+    subtitle: "@swaybaetv",
+    href: "https://youtube.com/channel/UCbpQhE5NYQ05pSp_DJJQxCA",
+    Icon: YoutubeIcon,
+  },
+  {
+    title: "TikTok",
+    subtitle: "@sway_baetv",
+    href: "https://tiktok.com/@sway_baetv",
+    Icon: TiktokIcon,
+  },
+  {
+    title: "Twitter/X",
+    subtitle: "@sway_baetv",
+    href: "https://twitter.com/sway_baetv",
+    Icon: TwitterIcon,
+  },
+  {
+    title: "Bluesky",
+    subtitle: "@Swaybae",
+    href: "https://swaybae.bsky.social",
+    Icon: BlueskyIcon,
+  },
+  {
+    title: "Instagram",
+    subtitle: "@sway_baetv",
+    href: "https://instagram.com/sway_baetv",
+    Icon: InstagramIcon,
+  },
+  {
+    title: "Discord",
+    subtitle: "@sway_bae",
+    href: "https://discord.com/invite/K73uN9k",
+    Icon: DiscordIcon,
+  },
+  {
+    title: "Spotify",
+    subtitle: "@Swaybae",
+    href: "https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq",
+    Icon: SpotifyIcon,
+  },
 ];
 
 //! MERCH CARDS
@@ -87,55 +224,17 @@ export const brandSvgs = [
   { src: "/brands/svgs/dreamhack-svg.svg", id: 8, name: "Dreamhack" },
 ];
 
-//! SOCIAL INFO
-export const socialInfo = [
+//! BLOG LINKS
+export const blogLinks = [
   {
-    title: "Twitch",
-    subtitle: "@sway_bae",
-    href: "https://www.twitch.tv/sway_bae",
-    Icon: TwitchIcon,
+    id: "#2",
+    title: "The best FREE Ways to Support Your Favorite Content Creators!",
+    href: "/blog/post/the-best-free-ways-to-support-your-favorite-content-creators",
   },
   {
-    title: "YouTube",
-    subtitle: "@swaybaetv",
-    href: "https://youtube.com/channel/UCbpQhE5NYQ05pSp_DJJQxCA",
-    Icon: YoutubeIcon,
-  },
-  {
-    title: "TikTok",
-    subtitle: "@sway_baetv",
-    href: "https://tiktok.com/@sway_baetv",
-    Icon: TiktokIcon,
-  },
-  {
-    title: "Twitter/X",
-    subtitle: "@sway_baetv",
-    href: "https://twitter.com/sway_baetv",
-    Icon: TwitterIcon,
-  },
-  {
-    title: "Bluesky",
-    subtitle: "@Swaybae",
-    href: "https://swaybae.bsky.social",
-    Icon: BlueskyIcon,
-  },
-  {
-    title: "Instagram",
-    subtitle: "@sway_baetv",
-    href: "https://instagram.com/sway_baetv",
-    Icon: InstagramIcon,
-  },
-  {
-    title: "Discord",
-    subtitle: "@sway_bae",
-    href: "https://discord.com/invite/K73uN9k",
-    Icon: DiscordIcon,
-  },
-  {
-    title: "Spotify",
-    subtitle: "@Swaybae",
-    href: "https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq",
-    Icon: SpotifyIcon,
+    id: "#1",
+    title: "Sway Starts a BLOG!",
+    href: "/blog/post/sway-starts-a-blog",
   },
 ];
 

@@ -54,7 +54,6 @@ export function PostCard({ post, noTagColor = false, isFeatured = false }) {
           <Button
             asChild
             variant="link"
-            size="link"
             className={`font-semibold group-hover:font-bold group-hover:no-underline ${isFeatured ? "text-lg" : "text-sm"}`}
           >
             <Link href={`/blog/post/${postSlug}`}>
@@ -62,7 +61,7 @@ export function PostCard({ post, noTagColor = false, isFeatured = false }) {
               <ArrowRight
                 width={16}
                 height={16}
-                className="-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105"
+                className="ml-1 -translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105"
               />
             </Link>
           </Button>

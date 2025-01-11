@@ -30,11 +30,6 @@ const nextConfig = {
     // It's default behavior is to disable it in dev mode.
     SC_DISABLE_SPEEDY: "false",
   },
-  // logging: {
-  //   fetches: {
-  //     fullUrl: false,
-  //   },
-  // },
 };
 
 export default nextConfig;

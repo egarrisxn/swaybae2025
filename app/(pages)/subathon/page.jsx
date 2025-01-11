@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "Setup Page",
+  title: "Subathon Page",
 };
 
-export default function SetupPage() {
+export default function SubathonPage() {
   return (
     <section className="min-h-screen w-full py-12">
-      <div>Setup Page</div>
+      <div>Subathon Page</div>
     </section>
   );
 }

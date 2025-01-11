@@ -26,14 +26,14 @@ export default function TagCard({ post }) {
           <DateBadge publishedAt={publishedAt} />
         </div>
         <hr className="my-3 2xl:my-5" />
-        <div className="flex">
-          <h2 className="line-clamp-2 max-w-2xl text-2xl leading-normal tracking-normal text-gray-900 hover:underline hover:underline-offset-4 sm:text-3xl lg:line-clamp-1 xl:line-clamp-2 2xl:text-4xl 2xl:leading-relaxed 2xl:tracking-wide dark:text-gray-200">
+        <div className="flex 2xl:pb-2.5">
+          <h2 className="line-clamp-2 max-w-2xl text-2xl leading-normal tracking-normal text-gray-900 hover:underline hover:underline-offset-4 sm:text-3xl lg:line-clamp-1 xl:line-clamp-2 2xl:text-4xl dark:text-gray-200">
             <Link href={`/blog/post/${postSlug}`}>{title}</Link>
           </h2>
         </div>
         <div className="mt-1 flex h-full flex-col justify-between">
           <div className="flex items-start justify-start">
-            <p className="mb-4 line-clamp-5 max-w-2xl font-light leading-normal tracking-normal text-gray-700 lg:line-clamp-3 xl:line-clamp-4 xl:text-lg 2xl:mb-3 2xl:line-clamp-6 dark:text-gray-300">
+            <p className="mb-4 line-clamp-5 max-w-2xl font-light leading-normal tracking-normal text-gray-700 lg:line-clamp-3 xl:text-lg dark:text-gray-300">
               {excerpt}
             </p>
           </div>
@@ -41,7 +41,6 @@ export default function TagCard({ post }) {
             <Button
               asChild
               variant="link"
-              size="link"
               className="text-lg font-semibold group-hover:font-bold group-hover:no-underline"
             >
               <Link href={`/blog/post/${postSlug}`}>
@@ -49,7 +48,7 @@ export default function TagCard({ post }) {
                 <ArrowRight
                   width={16}
                   height={16}
-                  className="-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105"
+                  className="ml-1 -translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105"
                 />
               </Link>
             </Button>

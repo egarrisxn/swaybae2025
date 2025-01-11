@@ -14,7 +14,7 @@ export default function NotFound() {
       <p className="mb-4 text-wrap text-center text-base font-medium leading-none tracking-normal text-gray-700 drop-shadow-xl sm:mb-8 sm:text-xl md:mb-10 md:text-3xl lg:mb-12 lg:text-4xl 2xl:mb-14 2xl:text-5xl dark:text-gray-200">
         The page seems to be missing.
       </p>
-      <Button variant="shimmer" size="thick" className="text-lg" asChild>
+      <Button variant="shimmer" className="text-lg" asChild>
         <Link href="/">Back Home</Link>
       </Button>
     </div>

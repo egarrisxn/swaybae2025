@@ -13,7 +13,6 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
-        serif: ["var(--font-serif)", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         background: "hsl(var(--background))",
@@ -70,6 +69,22 @@ const config = {
         "3xl": "1740px",
       },
       keyframes: {
+        accordionDown: {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        accordionUp: {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
         fadeIn: {
           "0%": {
             opacity: 0,
@@ -80,8 +95,30 @@ const config = {
             transform: "translateY(0)",
           },
         },
+        marquee: {
+          from: {
+            transform: "translateX(0)",
+          },
+          to: {
+            transform: "translateX(calc(-100% - var(--gap)))",
+          },
+        },
+        marqueeVertical: {
+          from: {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(calc(-100% - var(--gap)))",
+          },
+        },
       },
-      animation: { fadeIn: "fadeIn 0.3s ease-in-out forwards" },
+      animation: {
+        accordionDown: "accordionDown 0.2s ease-out",
+        accordionUp: "accordionUp 0.2s ease-out",
+        fadeIn: "fadeIn 0.3s ease-in-out forwards",
+        marquee: "marquee var(--duration) linear infinite",
+        marqueeVertical: "marqueeVertical var(--duration) linear infinite",
+      },
     },
   },
   plugins: [tailwindcssAnimate, typography],

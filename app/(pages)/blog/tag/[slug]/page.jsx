@@ -35,7 +35,7 @@ const TagSlug = ({ tag }) => {
             linkHref="/blog"
             linkText="Back"
           />
-          <h2 className="my-5 font-serif text-[1.5rem] font-bold leading-snug text-[#111827] xl:text-[2.0rem] xl:leading-none dark:text-white">
+          <h2 className="my-5 text-[1.5rem] font-bold leading-snug text-[#111827] xl:text-[2.0rem] xl:leading-none dark:text-white">
             {title}
           </h2>
           <hr className="mb-12" />

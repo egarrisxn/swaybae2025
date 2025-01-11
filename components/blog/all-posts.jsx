@@ -55,9 +55,8 @@ export default function AllPosts({ posts }) {
           <div className="mt-16 flex justify-center p-4">
             {posts.length > loadMore ? (
               <Button
-                variant="shimmer"
-                size="xs"
                 type="button"
+                variant="shimmer"
                 onClick={showMoreArticles}
               >
                 Load more posts.

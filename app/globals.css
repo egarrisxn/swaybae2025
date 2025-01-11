@@ -80,7 +80,7 @@
   }
 
   body {
-    @apply scroll-smooth bg-background font-sans text-foreground antialiased;
+    @apply scroll-smooth bg-background text-foreground;
   }
 }
 

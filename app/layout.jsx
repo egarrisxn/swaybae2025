@@ -1,20 +1,16 @@
-import { ViewTransitions } from "next-view-transitions";
-import { Poppins, Roboto_Serif } from "next/font/google";
+import { Poppins as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { NavbarDock } from "@/components/navbar-dock";
+import { Footer } from "@/components/footer";
 import { ThemeProvider } from "./theme-provider";
 import "./globals.css";
 
-const poppins = Poppins({
+const fontSans = FontSans({
   variable: "--font-sans",
   subsets: ["latin"],
-  display: "swap",
   style: ["normal", "italic"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-const robotoSerif = Roboto_Serif({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  display: "swap",
 });
 
 export const metadata = {
@@ -74,23 +70,23 @@ export const metadata = {
   },
 };
 
-export const viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8f8f8" },
-    { media: "(prefers-color-scheme: dark)", color: "#121313" },
-  ],
-};
-
 export default function RootLayout({ children }) {
   return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <body className={`${poppins.variable} ${robotoSerif.variable}`}>
-          <ThemeProvider>{children}</ThemeProvider>
-          {/* <Analytics />
-        <SpeedInsights /> */}
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen w-full font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <NavbarDock />
+            <Footer />
+          </TooltipProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

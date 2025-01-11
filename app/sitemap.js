@@ -43,11 +43,7 @@ export default async function sitemap() {
       lastModified: new Date().toISOString(),
     },
     {
-      url: `${baseUrl}/setup`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${baseUrl}/social`,
+      url: `${baseUrl}/subathon`,
       lastModified: new Date().toISOString(),
     },
     {

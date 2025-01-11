@@ -15,12 +15,7 @@ export default function Error({ error, reset }) {
       <p className="mb-4 text-wrap text-center text-base font-medium leading-none tracking-normal text-gray-700 drop-shadow-xl sm:mb-8 sm:text-xl md:mb-10 md:text-3xl lg:mb-12 lg:text-4xl 2xl:mb-14 2xl:text-5xl dark:text-gray-200">
         There seems to be something wrong.
       </p>
-      <Button
-        variant="shimmer"
-        size="thick"
-        className="text-lg"
-        onClick={() => reset()}
-      >
+      <Button variant="shimmer" className="text-lg" onClick={() => reset()}>
         Try again
       </Button>
     </div>
