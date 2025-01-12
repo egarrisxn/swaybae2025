@@ -8,7 +8,7 @@ export function YouTubePlayer() {
         animationStyle="from-center"
         videoSrc="https://www.youtube-nocookie.com/embed/CxDM2AicCME?si=AjzmdEHuw8ZOXTEW"
         thumbnailSrc="/images/sway-yt.webp"
-        thumbnailAlt="Alt Video"
+        thumbnailAlt="Video thumbnail"
       />
     </div>
   );

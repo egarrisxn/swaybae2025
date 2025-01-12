@@ -31,11 +31,6 @@ const animationVariants = {
     animate: { x: 0, opacity: 1 },
     exit: { x: "100%", opacity: 0 },
   },
-  fade: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-  },
   "top-in-bottom-out": {
     initial: { y: "-100%", opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -61,16 +56,17 @@ export function VideoDialog({
   return (
     <div className={cn("relative", className)}>
       <div
-        className="group relative cursor-pointer"
+        aria-label="video play button"
         onClick={() => setIsVideoOpen(true)}
+        className="group relative cursor-pointer"
       >
         <Image
           src={thumbnailSrc}
           alt={thumbnailAlt}
-          width={1920}
-          height={1080}
-          unoptimized
-          className="w-full rounded-lg border-2 border-foreground shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
+          width={640}
+          height={360}
+          quality={100}
+          className="rounded-lg border-2 border-foreground object-cover shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="flex size-28 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">

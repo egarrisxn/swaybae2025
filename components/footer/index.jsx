@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { RssIcon } from "@/components/icons";
-import { SpotifyNowPlaying } from "./spotify-now-playing";
+// import { SpotifyNowPlaying } from "./spotify-now-playing";
 import { ScrollToTop } from "./scroll-to-top";
 import { SocialIcons } from "./social-icons";
 import { SubscribeForm } from "./subscribe-form";
@@ -15,7 +15,8 @@ export default function Footer() {
             <SocialIcons />
           </div>
           <div className="flex w-full items-start justify-start">
-            <SpotifyNowPlaying />
+            {/* <SpotifyNowPlaying /> */}
+            <p>Spotify Goes Here.</p>
           </div>
           <div className="flex w-full items-start justify-start">
             <p>© 2025 Sway Bae. All rights reserved.</p>
@@ -71,7 +72,8 @@ export default function Footer() {
           <SocialIcons />
         </div>
         <div>
-          <SpotifyNowPlaying />
+          {/* <SpotifyNowPlaying /> */}
+          <p>Spotify Goes Here.</p>
         </div>
         <div className="flex flex-row items-center gap-2 font-medium">
           <Link href="/faq" className="underline-offset-4 hover:underline">

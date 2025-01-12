@@ -100,6 +100,10 @@ const config = {
             backgroundPosition: "var(--bg-size) 0",
           },
         },
+        line: {
+          "0%, 100%": { transform: "translateY(100%)" },
+          "50%": { transform: "translateY(0)" },
+        },
         marquee: {
           from: {
             transform: "translateX(0)",
@@ -122,6 +126,9 @@ const config = {
         accordionUp: "accordionUp 0.2s ease-out",
         fadeIn: "fadeIn 0.3s ease-in-out forwards",
         gradient: "gradient 8s linear infinite",
+        line1: "line 3s linear infinite",
+        line2: "line 6s linear infinite",
+        line3: "line 9s linear infinite",
         marquee: "marquee var(--duration) linear infinite",
         marqueeVertical: "marqueeVertical var(--duration) linear infinite",
       },
