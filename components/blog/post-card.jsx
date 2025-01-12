@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "@/components/icons/arrow-right";
+import { ArrowRight } from "@/components/icons";
 import { urlFor } from "@/lib/sanity/client";
 import { Button } from "@/components/ui/button";
 import TagBadge from "./tag-badge";

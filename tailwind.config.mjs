@@ -95,6 +95,11 @@ const config = {
             transform: "translateY(0)",
           },
         },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
         marquee: {
           from: {
             transform: "translateX(0)",
@@ -116,6 +121,7 @@ const config = {
         accordionDown: "accordionDown 0.2s ease-out",
         accordionUp: "accordionUp 0.2s ease-out",
         fadeIn: "fadeIn 0.3s ease-in-out forwards",
+        gradient: "gradient 8s linear infinite",
         marquee: "marquee var(--duration) linear infinite",
         marqueeVertical: "marqueeVertical var(--duration) linear infinite",
       },

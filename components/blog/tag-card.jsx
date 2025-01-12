@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity/client";
-import { ArrowRight } from "@/components/icons/arrow-right";
+import { ArrowRight } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import DateBadge from "./date-badge";
 

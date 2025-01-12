@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft } from "@/components/icons/arrow-left";
+import { ArrowLeft } from "@/components/icons";
 import SearchBar from "./search-bar";
 
 export default function PageHeader({

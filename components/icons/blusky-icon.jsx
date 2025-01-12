@@ -1,4 +1,4 @@
-const BlueskyIcon = ({ className = "", width = "24", height = "24" }) => {
+const BluskyIcon = ({ className = "", width = "24", height = "24" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,7 +7,7 @@ const BlueskyIcon = ({ className = "", width = "24", height = "24" }) => {
       viewBox="0 0 24 24"
       className={className}
     >
-      <title>Bluesky</title>
+      <title>Blusky</title>
       <path
         fill="none"
         stroke="currentColor"
@@ -20,4 +20,4 @@ const BlueskyIcon = ({ className = "", width = "24", height = "24" }) => {
   );
 };
 
-export { BlueskyIcon };
+export { BluskyIcon };

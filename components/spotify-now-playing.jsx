@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getNowPlayingItem } from "@/lib/spotify/dataHandler";
-import { SpotifyColored } from "@/components/icons/spotify-colored";
+import { SpotifyColored } from "@/components/icons";
 
 export function SpotifyNowPlaying() {
   const [loading, setLoading] = useState(true);

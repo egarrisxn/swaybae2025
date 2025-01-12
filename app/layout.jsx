@@ -1,8 +1,8 @@
 import { Poppins as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { NavbarDock } from "@/components/navbar-dock";
-import { Footer } from "@/components/footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { ThemeProvider } from "./theme-provider";
 import "./globals.css";
 
@@ -75,14 +75,14 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen w-full font-sans antialiased",
+          "min-h-[100dvh] w-full bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
-            <NavbarDock />
+            <Navbar />
             <Footer />
           </TooltipProvider>
         </ThemeProvider>

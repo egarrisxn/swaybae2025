@@ -1,6 +1,5 @@
 "use client";
-import { XCloseIcon } from "@/components/icons/xclose-icon";
-import { MenuIcon } from "@/components/icons/menu-icon";
+import { XCloseIcon, MenuIcon } from "@/components/icons";
 
 export default function MenuToggle({
   handleToggleMenuOnClick,

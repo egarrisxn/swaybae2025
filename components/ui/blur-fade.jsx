@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion, useInView, Variants } from "motion/react";
+import { AnimatePresence, motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const BlurFade = ({
@@ -21,6 +21,7 @@ const BlurFade = ({
     visible: { y: -yOffset, opacity: 1, filter: `blur(0px)` },
   };
   const combinedVariants = variant || defaultVariants;
+
   return (
     <AnimatePresence>
       <motion.div

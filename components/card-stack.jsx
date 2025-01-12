@@ -3,7 +3,40 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "motion/react";
 import { useDrag } from "@use-gesture/react";
-import { merchCards } from "@/lib/data";
+
+const merchCards = [
+  {
+    id: 0,
+    name: "Water Bottle",
+    designation: "Stay Wet!",
+    src: "/merch/bottle.webp",
+  },
+  {
+    id: 1,
+    name: "Dad Cap",
+    designation: "Stay Shaded!",
+    src: "/merch/cap.webp",
+  },
+  {
+    id: 2,
+    name: "Long Sleeve",
+    designation: "Stay Covered!",
+    src: "/merch/ls.webp",
+  },
+  { id: 3, name: "Crewneck", designation: "Warm Up!", src: "/merch/crew.webp" },
+  {
+    id: 4,
+    name: "Hoodie",
+    designation: "Most Comfortable!",
+    src: "/merch/hood.webp",
+  },
+  {
+    id: 5,
+    name: "T-Shirt",
+    designation: "Ultra Fashion!",
+    src: "/merch/ss.webp",
+  },
+];
 
 export function CardStack() {
   const [stack, setStack] = useState(merchCards);
@@ -74,7 +107,6 @@ export function CardStack() {
                 alt={card.name}
                 width="384"
                 height="550"
-                priority
                 className="pointer-events-none flex rounded-2xl object-cover"
               />
             </div>

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { searchQuery } from "@/lib/sanity/queries";
 import { client } from "@/lib/sanity/client";
-import { SearchIcon } from "@/components/icons/search-icon";
+import { SearchIcon } from "@/components/icons";
 
 export default function SearchBar({ placeholder }) {
   const searchParams = useSearchParams();

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { enrichTweet } from "react-tweet";
 import { cn } from "@/lib/utils";
-import { TwitterIcon } from "@/components/icons/twitter-icon";
-import { VerifiedIcon } from "@/components/icons/verified-icon";
+import { TwitterIcon, VerifiedIcon } from "@/components/icons";
 
 const Twitter = ({ className, ...props }) => (
   <TwitterIcon className={className} {...props} />

@@ -124,8 +124,8 @@ export function ContactForm() {
         <div className="flex items-center justify-center pt-2">
           <Button
             className="uppercase tracking-tight"
-            type="submit"
             variant="shimmer"
+            type="submit"
           >
             Send Message
           </Button>
