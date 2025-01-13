@@ -1,4 +1,4 @@
-const TwitchIcon = ({ className = "", width = "24", height = "24" }) => {
+const SendIcon = ({ className = "", width = "24", height = "24" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,17 +7,17 @@ const TwitchIcon = ({ className = "", width = "24", height = "24" }) => {
       viewBox="0 0 24 24"
       className={className}
     >
-      <title>Twitch</title>
+      <title>Send</title>
       <path
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={2.5}
-        d="M21 2H3v16h5v4l4-4h5l4-4zm-10 9V7m5 4V7"
+        strokeWidth={2}
+        d="m6 12l-3 9l18-9L3 3zm0 0h6"
       ></path>
     </svg>
   );
 };
 
-export { TwitchIcon };
+export { SendIcon };

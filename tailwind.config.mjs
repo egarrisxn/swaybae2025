@@ -13,6 +13,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        serif: ["var(--font-serif)", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         background: "hsl(var(--background))",

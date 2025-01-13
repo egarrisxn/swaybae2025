@@ -4,7 +4,6 @@ import { DragItems } from "./drag-items";
 import { AnimatedFaq } from "./animated-faq";
 import { AnimatedTabs } from "./animated-tabs";
 import { Lines } from "./lines";
-import TestFooter from "./test-footer";
 
 export default function Test() {
   return (
@@ -41,11 +40,6 @@ export default function Test() {
           <div className="mx-auto max-w-4xl py-16">
             <AnimatedTabs />
           </div>
-        </div>
-      </div>
-      <div className="mt-8 w-full border-2">
-        <div className="container mx-auto">
-          <TestFooter />
         </div>
       </div>
     </>

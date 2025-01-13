@@ -1,16 +1,27 @@
-import { Poppins as FontSans } from "next/font/google";
+import {
+  Poppins as FontSans,
+  Playfair_Display as FontSerif,
+} from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "./theme-provider";
 import "./globals.css";
+import { Lines } from "@/components/test/lines";
 
 const fontSans = FontSans({
   variable: "--font-sans",
   subsets: ["latin"],
   style: ["normal", "italic"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const fontSerif = FontSerif({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -76,11 +87,13 @@ export default function RootLayout({ children }) {
       <body
         className={cn(
           "min-h-[100dvh] w-full bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontSerif.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
+            <Lines />
             {children}
             <Navbar />
             <Footer />

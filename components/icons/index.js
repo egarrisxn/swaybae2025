@@ -11,6 +11,7 @@ export { MenuIcon } from "./menu-icon";
 export { PlayIcon } from "./play-icon";
 export { RssIcon } from "./rss-icon";
 export { SearchIcon } from "./search-icon";
+export { SendIcon } from "./send-icon";
 export { SpotifyColored } from "./spotify-colored";
 export { SpotifyIcon } from "./spotify-icon";
 export { TiktokIcon } from "./tiktok-icon";

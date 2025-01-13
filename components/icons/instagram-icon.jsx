@@ -17,7 +17,7 @@ const InstagramIcon = ({ className = "", width = "24", height = "24" }) => {
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2}
+          strokeWidth={2.5}
           rx={5.5}
         ></rect>
         <circle
@@ -27,7 +27,7 @@ const InstagramIcon = ({ className = "", width = "24", height = "24" }) => {
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2}
+          strokeWidth={2.5}
         ></circle>
         <circle cx={16.894} cy={7.106} r={1.03} fill="currentColor"></circle>
       </g>
