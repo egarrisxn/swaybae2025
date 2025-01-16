@@ -65,7 +65,7 @@ export function VideoDialog({
           alt={thumbnailAlt}
           width={640}
           height={360}
-          quality={100}
+          unoptimized
           className="rounded-lg border-2 border-foreground object-cover shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
