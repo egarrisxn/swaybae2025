@@ -25,7 +25,7 @@ const footerLinks = [
   { href: "/faq", label: "FAQs" },
   { href: "/terms", label: "Terms" },
   { href: "/privacy", label: "Privacy" },
-  { href: "/feed.xml", label: "RSS", icon: <RssIcon width={12} height={12} /> },
+  { href: "/rss.xml", label: "RSS", icon: <RssIcon width={12} height={12} /> },
 ];
 
 export default function Footer() {

@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <section className="min-h-screen w-full py-12">
+    <section className="min-h-screen w-full">
       <div>Terms Of Service Page</div>
     </section>
   );

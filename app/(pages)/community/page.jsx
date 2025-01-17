@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function CommunityPage() {
   return (
-    <section className="w-full pt-12">
+    <section className="min-h-screen w-full">
       <div className="container mx-auto mt-24 max-w-2xl px-4 lg:max-w-7xl xl:px-0">
         <div className="mx-auto grid max-w-[65ch] grid-cols-1 items-center leading-relaxed xl:max-w-[80ch]">
           <h6 className="pb-1 font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100">

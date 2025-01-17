@@ -10,12 +10,16 @@ import Brands from "@/components/landing/brands";
 import Contact from "@/components/landing/contact";
 import Photos from "@/components/landing/photos";
 import Chaos from "@/components/landing/chaos";
-import { PageLines } from "@/components/page-lines";
+// import { PageLines } from "@/components/page-lines";
+
+export const metadata = {
+  title: "Sway Bae | Creator of Chaos!",
+};
 
 export default function Home() {
   return (
     <>
-      <PageLines />
+      {/* <PageLines /> */}
       <div className="grid size-full grid-cols-1">
         <section id="hero">
           <Hero />

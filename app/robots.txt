@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://swaybae.net/sitemap.xml
+Host: https://swaybae.net

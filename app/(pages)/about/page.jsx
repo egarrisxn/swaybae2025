@@ -9,7 +9,7 @@ import PersonalInfo from "@/components/about/personal-info";
 import SwayBaeScrollText from "@/components/about/swaybae-scroll-text";
 
 export const metadata = {
-  title: "About Page",
+  title: "About",
 };
 
 export default function AboutPage() {

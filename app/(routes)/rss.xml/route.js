@@ -2,10 +2,10 @@ import RSS from "rss";
 import { rssData } from "@/lib/sanity/rss";
 
 export async function GET() {
-  const feed = new RSS({
-    title: "Sway Bae 2025",
-    description: "The official site for Sway Bae & The Bae Squad!",
-    feed_url: "https://www.swaybae.net/feed.xml",
+  const rss = new RSS({
+    title: "Sway Bae | Creator of Chaos",
+    description: "The official online space for Sway Bae & The Bae Squad!",
+    feed_url: "https://www.swaybae.net/rss.xml",
     site_url: "https://www.swaybae.net",
     managingEditor: "sway.bae9000@gmail.com (Sway)",
     webMaster: "egarrisxn@gmail.com (Ethan)",
@@ -22,7 +22,7 @@ export async function GET() {
 
   if (posts && Array.isArray(posts)) {
     posts.map((post) => {
-      feed.item({
+      rss.item({
         title: post.title,
         description: post.excerpt,
         url: `https://www.swaybae.net/blog/post/${post.postSlug}`,
@@ -33,15 +33,16 @@ export async function GET() {
       });
     });
   } else {
-    console.error("allPosts is not an array in feed.xml route");
+    console.error("allPosts is not an array in rss.xml route");
     if (allPosts) {
       console.log("Type of allPosts:", typeof allPosts);
       console.log("Stringified allPosts:", JSON.stringify(allPosts, null, 2));
     }
   }
-  return new Response(feed.xml({ indent: true }), {
+  return new Response(rss.xml({ indent: true }), {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, max-age=86400",
     },
   });
 }

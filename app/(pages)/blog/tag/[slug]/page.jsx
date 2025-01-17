@@ -25,7 +25,7 @@ const TagSlug = ({ tag }) => {
   if (!tag) return null;
 
   return (
-    <section className="min-h-screen w-full py-12">
+    <section className="min-h-screen w-full">
       <div className="container mx-auto my-12 max-w-2xl px-4 lg:max-w-7xl xl:px-0">
         <div className="mx-auto grid grid-cols-1 items-center leading-relaxed">
           <PageHeader

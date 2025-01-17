@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="min-h-screen w-full py-12">
+    <section className="min-h-screen w-full">
       <div>Privacy Policy Page</div>
     </section>
   );

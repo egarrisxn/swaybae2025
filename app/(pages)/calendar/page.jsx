@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function CalendarPage() {
   return (
-    <section className="min-h-screen w-full py-12">
+    <section className="min-h-screen w-full">
       <div className="container mx-auto my-24 max-w-2xl px-4 lg:max-w-7xl xl:px-0">
         <div className="mx-auto grid grid-cols-1 items-center leading-relaxed">
           <h2 className="mb-4 font-serif text-[1.5rem] font-bold leading-snug text-[#111827] xl:text-[2.0rem] xl:leading-none dark:text-white">

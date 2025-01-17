@@ -31,7 +31,7 @@ const PostSlug = ({ post }) => {
   if (!post) return null;
 
   return (
-    <div className="mx-auto flex min-h-screen flex-col items-center border-2 py-12">
+    <div className="mx-auto flex min-h-screen flex-col items-center">
       <div className="my-12">
         <aside>
           <div className="fixed left-auto right-[2rem] top-[10rem] mt-0 hidden h-full w-48 justify-start space-y-4 transition lg:left-[1.5rem] lg:top-[8rem] xl:right-auto xl:top-[10rem] xl:block 2xl:left-[8rem]">
