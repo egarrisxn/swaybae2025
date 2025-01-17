@@ -2,17 +2,19 @@ import {
   Poppins as FontSans,
   Playfair_Display as FontSerif,
 } from "next/font/google";
+import { ViewTransitions } from "next-view-transitions";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "./theme-provider";
+
 import "./globals.css";
-import { Lines } from "@/components/test/lines";
 
 const fontSans = FontSans({
   variable: "--font-sans",
   subsets: ["latin"],
+  display: "swap",
   style: ["normal", "italic"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -20,6 +22,7 @@ const fontSans = FontSans({
 const fontSerif = FontSerif({
   variable: "--font-serif",
   subsets: ["latin"],
+  display: "swap",
   style: ["normal", "italic"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
@@ -81,25 +84,38 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
+    { media: "(prefers-color-scheme: dark)", color: "#262323" },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-[100dvh] w-full bg-background font-sans antialiased",
-          fontSans.variable,
-          fontSerif.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
-            <Lines />
-            {children}
-            <Navbar />
-            <Footer />
-          </TooltipProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={cn(
+            "m-0 min-h-[100dvh] w-full scroll-smooth p-0 font-sans antialiased",
+            fontSans.variable,
+            fontSerif.variable
+          )}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TooltipProvider delayDuration={0}>
+              <main>{children}</main>
+              <Navbar />
+              <Footer />
+            </TooltipProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

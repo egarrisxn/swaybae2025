@@ -1,25 +1,23 @@
 import Image from "next/image";
 import { TextBorder } from "@/components/ui/text-border";
-import { FadeInText } from "@/components/motion/advanced-motion";
 import { ChevronDown } from "@/components/icons";
 
 export default function Hero() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
+      {/* Top Text Goes Here */}
+      {/* <div className='absolute right-10 top-10 z-50 flex w-full justify-end text-white'></div> */}
+
+      {/* Middle Text Goes Here */}
       <div className="absolute z-30 flex size-full flex-col items-center justify-center pb-36 text-center sm:pb-24 md:pb-16 lg:pb-24">
         <TextBorder text="Creator of Chaos" />
-        <FadeInText
-          className="text-5xl font-black leading-none tracking-tighter text-foreground text-white drop-shadow md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9rem]"
-          text={"Creator of Chaos"}
-          animateByCharacter={true}
-          characterDelay={0.05}
-          delay={0.2}
-          inView={true}
-        />
       </div>
+
+      {/* Bottom Text Goes Here */}
       <div className="absolute bottom-5 z-30 flex w-full animate-bounce justify-center text-foreground lg:bottom-10">
         <ChevronDown className="size-7 md:size-8 lg:size-9 xl:size-10 2xl:size-12" />
       </div>
+      {/* Desktop Video/Image */}
       <div className="absolute inset-0 z-10 hidden size-full md:block">
         <video
           aria-hidden="true"
@@ -40,6 +38,7 @@ export default function Hero() {
           />
         </video>
       </div>
+      {/* Mobile Video/Image */}
       <div
         className="absolute inset-0 z-10 block size-full md:hidden"
         style={{ paddingBottom: "56.25%" }}

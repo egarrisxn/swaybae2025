@@ -35,10 +35,11 @@ export default function Blog() {
         <article className="order-1 flex flex-col gap-3 p-4 xs:gap-4 md:order-2 md:mb-24 md:pt-24 lg:mb-0 lg:gap-5 xl:pt-32">
           <FadeInText
             className="mx-auto flex items-center font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100"
-            text={`Latest Blog Posts`}
             delay={0.04}
             inView
-          />
+          >
+            <p>Latest Blog Posts</p>
+          </FadeInText>
           <FadeInChild delay={0.04} inView>
             {blogLinks.map(({ id, title, href }) => (
               <div

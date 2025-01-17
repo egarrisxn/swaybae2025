@@ -8,22 +8,29 @@ export default function Twitter() {
         <article className="flex w-full flex-col gap-1 p-2 sm:px-12 sm:py-4 lg:gap-3 lg:px-4">
           <FadeInText
             className="pb-1 font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100"
-            text={`Keeping It Social`}
             delay={0.04}
             inView
-          />
+          >
+            <span>Keeping It Social</span>
+          </FadeInText>
           <FadeInText
-            className="bg-gradient-to-t from-neutral-600 via-neutral-700 to-neutral-800 bg-clip-text pb-3 text-4xl font-bold text-transparent drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,0.8)] lg:text-5xl xl:text-6xl dark:from-stone-200 dark:to-neutral-200"
-            text={`Follow me on my adventures!`}
+            className="bg-gradient-to-t from-neutral-600 via-neutral-700 to-neutral-800 bg-clip-text pb-3 font-serif text-4xl font-bold text-transparent drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,0.8)] lg:text-5xl xl:text-6xl dark:from-stone-200 dark:to-neutral-200"
             delay={0.04}
             inView
-          />
+          >
+            <h2>Follow me on my adventures!</h2>
+          </FadeInText>
           <FadeInText
             className="max-w-3xl text-pretty pb-3 font-light leading-relaxed text-gray-700 lg:text-lg xl:text-xl dark:text-gray-300"
-            text={`I create family-friendly entertainment centered around the concepts of positive mental attitude in gaming with the mantra of leaving someone's day better than I found it.`}
             delay={0.04}
             inView
-          />
+          >
+            <p>
+              I create family-friendly entertainment centered around the
+              concepts of positive mental attitude in gaming with the mantra of
+              leaving someone's day better than I found it.
+            </p>
+          </FadeInText>
         </article>
         {/* Tweets Section */}
         <div className="flex w-full flex-col items-center justify-center gap-4 py-2 lg:flex-row lg:items-start lg:gap-3 lg:px-2 xl:gap-4">

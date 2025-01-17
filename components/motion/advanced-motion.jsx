@@ -45,7 +45,7 @@ export function FadeInChild({
 }
 
 export function FadeInText({
-  text,
+  children,
   className,
   variant,
   duration = 0.4,
@@ -67,9 +67,15 @@ export function FadeInText({
   const combinedVariants = variant || defaultVariants;
 
   //! Used For animatedByCharacter
+  const text = typeof children === "string" ? children : "";
   const characters = useMemo(() => Array.from(text), [text]);
 
   if (animateByCharacter) {
+    if (typeof children !== "string") {
+      console.warn(
+        "`animateByCharacter` is enabled, but `children` is not a string. Animation may not work as expected."
+      );
+    }
     return (
       <div className="flex">
         <AnimatePresence>
@@ -112,7 +118,7 @@ export function FadeInText({
           }}
           className={cn("inline-block", className)}
         >
-          {text}
+          {children}
         </motion.span>
       </AnimatePresence>
     </div>

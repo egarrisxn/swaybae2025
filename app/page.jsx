@@ -10,46 +10,64 @@ import Brands from "@/components/landing/brands";
 import Contact from "@/components/landing/contact";
 import Photos from "@/components/landing/photos";
 import Chaos from "@/components/landing/chaos";
+import { PageLines } from "@/components/page-lines";
 
 export default function Home() {
   return (
-    <div className="flex size-full flex-col">
-      <section id="hero">
-        <Hero />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="socials">
-        <Socials />
-      </section>
-      <section id="youtube">
-        <YouTube />
-      </section>
-      <section id="twitter">
-        <Twitter />
-      </section>
-      <section id="calendar">
-        <Calendar />
-      </section>
-      <section id="merch">
-        <Merch />
-      </section>
-      <section id="blog">
-        <Blog />
-      </section>
-      <section id="brands">
-        <Brands />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
-      <section id="photos">
-        <Photos />
-      </section>
-      <section id="chaos">
-        <Chaos />
-      </section>
-    </div>
+    <>
+      <PageLines />
+      <div className="grid size-full grid-cols-1">
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="socials">
+          <Socials />
+        </section>
+        <section id="youtube">
+          <YouTube />
+        </section>
+        <section id="twitter">
+          <Twitter />
+        </section>
+        <section id="calendar">
+          <Calendar />
+        </section>
+        <section id="merch">
+          <Merch />
+        </section>
+        <section id="blog">
+          <Blog />
+        </section>
+        <section id="brands">
+          <Brands />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <section id="photos">
+          <Photos />
+        </section>
+        <section id="chaos">
+          <Chaos />
+        </section>
+      </div>
+    </>
   );
 }
+
+// ! Test Loader
+// function loadingPage() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Loading...");
+//     }, 3000);
+//   });
+// }
+// export default async function Home() {
+//   const load = await loadingPage();
+//   console.log({ load });
+//   return <h2>Home Page</h2>;
+// }
