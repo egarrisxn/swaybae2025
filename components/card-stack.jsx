@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "motion/react";
 import { useDrag } from "@use-gesture/react";
 
@@ -85,7 +85,7 @@ export function CardStack() {
         return (
           <motion.div
             key={card.id}
-            className="absolute flex size-fit min-w-48 max-w-[17rem] flex-col justify-between rounded-3xl border bg-white p-2 shadow-xl xs:min-h-96 xs:min-w-[19rem] xs:max-w-[26rem] sm:min-h-[30rem] sm:min-w-96 dark:bg-black"
+            className="absolute flex size-fit min-w-48 max-w-[17rem] flex-col justify-between rounded-3xl border bg-white p-1.5 shadow-xl xs:min-h-96 xs:min-w-[19rem] xs:max-w-[26rem] sm:min-h-[30rem] sm:min-w-96 dark:bg-black"
             style={{
               zIndex: stack.length - index,
             }}

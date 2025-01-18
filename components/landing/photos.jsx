@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeInChild } from "@/components/motion/advanced-motion";
+import { BlurItem } from "@/components/motion/blur-fade";
 
 const imageGrid = [
   "/grid/1.jpg",
@@ -22,7 +22,7 @@ export default function Photos() {
             const width = 800;
             const height = 600;
             return (
-              <FadeInChild key={imageUrl} delay={0.25 + idx * 0.05} inView>
+              <BlurItem key={imageUrl} delay={0.25 + idx * 0.05}>
                 <Image
                   className="mb-4 rounded-lg border object-contain shadow-lg md:mb-6"
                   src={imageUrl}
@@ -30,7 +30,7 @@ export default function Photos() {
                   width={width}
                   height={height}
                 />
-              </FadeInChild>
+              </BlurItem>
             );
           })}
         </div>

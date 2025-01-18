@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { enrichTweet } from "react-tweet";
-import { cn } from "@/lib/utils";
 import { TwitterIcon, VerifiedIcon } from "@/components/icons";
+import { cn } from "@/lib/utils";
 
 const Twitter = ({ className, ...props }) => (
   <TwitterIcon className={className} {...props} />
@@ -41,7 +41,7 @@ export const TweetSkeleton = ({ className, ...props }) => (
 export const TweetNotFound = ({ className, ...props }) => (
   <div
     className={cn(
-      "flex size-full flex-col items-center justify-center gap-2 rounded-lg border p-4",
+      "flex size-full flex-col items-center justify-center gap-2 rounded-lg border border-foreground/20 bg-white p-4 shadow-md dark:bg-black dark:bg-gradient-to-tr dark:from-black dark:via-slate-900 dark:to-slate-950",
       className
     )}
     {...props}

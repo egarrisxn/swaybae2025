@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FadeInChild, FadeInText } from "@/components/motion/advanced-motion";
 import { Button } from "@/components/ui/button";
+import { BlurItem, BlurText } from "@/components/motion/blur-fade";
 import { ArrowRight } from "@/components/icons";
 
 const blogLinks = [
@@ -19,28 +19,27 @@ const blogLinks = [
 
 export default function Blog() {
   return (
-    <div className="container mx-auto mt-24 max-w-6xl px-4 md:mt-12 xl:px-0">
+    <div className="container mx-auto mt-24 max-w-6xl px-4 xl:px-0">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6 xl:gap-12">
         <aside className="relative order-2 flex justify-center md:order-1 md:justify-start xl:px-4">
-          <FadeInChild delay={0.04} inView>
+          <BlurItem delay={0.4} className="-mb-2">
             <Image
               src="/images/blogpicture.png"
               alt="Another cutout photo of Sway"
               width={500}
-              height={900}
+              height={800}
               className="h-auto w-auto max-w-full"
             />
-          </FadeInChild>
+          </BlurItem>
         </aside>
         <article className="order-1 flex flex-col gap-3 p-4 xs:gap-4 md:order-2 md:mb-24 md:pt-24 lg:mb-0 lg:gap-5 xl:pt-32">
-          <FadeInText
+          <BlurText
             className="mx-auto flex items-center font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100"
-            delay={0.04}
-            inView
+            delay={0.3}
           >
             <p>Latest Blog Posts</p>
-          </FadeInText>
-          <FadeInChild delay={0.04} inView>
+          </BlurText>
+          <BlurItem delay={0.5}>
             {blogLinks.map(({ id, title, href }) => (
               <div
                 key={id}
@@ -66,13 +65,13 @@ export default function Blog() {
                 </Link>
               </div>
             ))}
-          </FadeInChild>
+          </BlurItem>
           <div className="mt-12 flex items-center justify-center lg:mt-16">
-            <FadeInChild delay={0.04} inView>
+            <BlurItem delay={0.4}>
               <Button asChild variant="main">
                 <Link href="/blog">Read More!</Link>
               </Button>
-            </FadeInChild>
+            </BlurItem>
           </div>
         </article>
       </div>

@@ -76,7 +76,7 @@ export function FullCalendarList() {
         arg.jsEvent.preventDefault();
       }}
       initialView={"listMonth"}
-      contentHeight="450px"
+      contentHeight="500px"
       buttonIcons={{
         prev: "chevron-left",
         next: "chevron-right",

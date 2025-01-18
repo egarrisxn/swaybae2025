@@ -51,7 +51,7 @@ export function Spring({ className, children, delay = 0.5 }) {
   );
 }
 
-export function Appear({ className, children, duration = 1, delay = 0.4 }) {
+export function Appear({ className, children, duration = 1, delay = 0.1 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}

@@ -17,9 +17,17 @@ export default function Hero() {
       <div className="absolute bottom-5 z-30 flex w-full animate-bounce justify-center text-foreground lg:bottom-10">
         <ChevronDown className="size-7 md:size-8 lg:size-9 xl:size-10 2xl:size-12" />
       </div>
+
       {/* Desktop Video/Image */}
       <div className="absolute inset-0 z-10 hidden size-full md:block">
-        <video
+        <Image
+          alt="Fallback image for desktop video"
+          className="size-full object-cover"
+          height={1440}
+          src="/hero/desktop.png"
+          width={2560}
+        />
+        {/* <video
           aria-hidden="true"
           autoPlay
           className="pointer-events-none absolute inset-0 size-full rounded-3xl bg-background object-cover p-4"
@@ -36,14 +44,22 @@ export default function Hero() {
             src="/hero/desktop.png"
             width={2560}
           />
-        </video>
+        </video> */}
       </div>
+
       {/* Mobile Video/Image */}
       <div
         className="absolute inset-0 z-10 block size-full md:hidden"
         style={{ paddingBottom: "56.25%" }}
       >
-        <video
+        <Image
+          alt="hero photo"
+          className="pointer-events-none absolute inset-0 size-full object-cover"
+          height={1920}
+          src="/hero/mobile.png"
+          width={1080}
+        />
+        {/* <video
           aria-hidden="true"
           autoPlay
           className="pointer-events-none absolute inset-0 size-full object-cover"
@@ -60,7 +76,7 @@ export default function Hero() {
             src="/hero/mobile.png"
             width={1080}
           />
-        </video>
+        </video> */}
       </div>
     </div>
   );

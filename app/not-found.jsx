@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Bounce } from "@/components/motion/simple-motion";
+import { BlurItem } from "@/components/motion/blur-fade";
 
 export const metadata = {
   title: "Page Not Found",
@@ -10,7 +10,7 @@ export const metadata = {
 export default function NotFoundPage() {
   return (
     <section className="overflow-hidden pb-24 pt-40 lg:pb-32 lg:pt-48 xl:pb-36 xl:pt-52">
-      <Bounce className="mx-auto max-w-[518px] text-center" delay={0.3}>
+      <BlurItem delay={0.3} className="mx-auto max-w-[518px] text-center">
         <Image
           src="/images/404-600x350.svg"
           alt="404"
@@ -28,7 +28,7 @@ export default function NotFoundPage() {
         <Button variant="shimmer" size="lg" className="text-lg" asChild>
           <Link href="/">Return Home</Link>
         </Button>
-      </Bounce>
+      </BlurItem>
     </section>
   );
 }

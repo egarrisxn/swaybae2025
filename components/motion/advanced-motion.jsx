@@ -3,7 +3,7 @@ import { useRef, useMemo } from "react";
 import { AnimatePresence, motion, useInView } from "motion/react";
 import { cn } from "@/lib/utils";
 
-export function FadeInChild({
+export function FadeInItem({
   children,
   className,
   variant,
